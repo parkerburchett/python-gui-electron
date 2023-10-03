@@ -4,6 +4,7 @@
 **/.npmrc
 .tags*
 .vs/
+.venv/
 .vscode/
 *.log
 *.pyc

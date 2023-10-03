@@ -1,25 +1,18 @@
 import sys
+import pandas as pd
 
-# FUNCTIONS
+file_path = 'data/mock_data.csv'
 
 
 def my_print(str):
     print('Python    : "' + str + '"', flush=True)  # Add flush=True here
 
 
-# CODE
+def main():
+    my_print('inside of python-gui-electron/python/pythonExample.py')
+    df = pd.read_csv(file_path)
+    my_print(str(df.values))
 
 
-my_print('Spawned from within electron (js)')
-
-while True:
-    line = sys.stdin.readline().strip()
-
-    if line == "terminate":
-        my_print('I got a terminate request from electron (js)...terminating')
-        exit(0)
-    elif line == "":
-        my_print('Terminating as there is no data given...terminated')
-        exit(0)
-    else:
-        my_print('I got string: "' + line + '", from electron (js)')
+if __name__ == '__main__':
+    main()

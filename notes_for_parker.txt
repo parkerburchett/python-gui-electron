@@ -1,0 +1,5 @@
+npm start
+
+# will start the app
+
+Don't know which node modules I need
